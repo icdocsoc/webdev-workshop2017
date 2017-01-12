@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--
+
+MIT License
+
+Copyright (c) 2017 Thomas Bower
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.    
+    
+    
+-->
+
+<html lang="en-GB" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Tony Field for DoCSoc President 2017</title>
+    <!-- This is the best way to include CSS into your HTML.
+         A clear separation of content and form is far superior
+         to using <style></style> or style="". These two methods
+         DO have valid uses, but not for regular styling like this -->
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    
+<header>
+    <!-- Classes are targetted like .wrapper in CSS -->
+    <div class="wrapper">
+    
+        <h1>Field 2017</h1>
+        <nav>
+            <a href="#title" class="big">Home</a>
+            <a href="#about">About Tony</a>
+            <a href="#manifesto">Tony's Vision</a>
+            <a href="#join">Get involved!</a>
+        </nav>
+    
+    </div>
+</header>
+
+<div id="main">
+    <div class="wrapper">
+        <h2>Stand with Tony!</h2>
+        <p>
+            Join Dr. Tony Field's campaign to <b>become DoCSoc President in 2017!</b>
+        </p>
+    </div>
+</div>
+
+<div id="about">
+    <div class="wrapper">
+        <h2>Meet Tony!</h2>
+        <img src="images/tony.jpg" alt="Tony Field" />
+        <h3>The Lecturer</h3>
+        <p class="big">
+            Winner of <span style="underline">multiple</span> teaching awards, including the <em>Faculty Award for
+            Excellence in Engineering Education</em>, as well as being the instructor of
+            the pioneering Haskell course, Tony is recognised as a fantastic
+            lecturer!
+        </p>
+        <h3>The Mentor</h3>
+        <ul>
+            <li>His tutees will testify that Tony is a great personal tutor!</li>
+            <li><blockquote>Tony is a great personal tutor!</blockquote></li>
+            <li>Tony has helped many achieve their dreams</li>
+        </ul>
+        <h2>The man</h2>
+        <p>Oh baby! What a guy!</p>
+    </div>
+</div>
+
+<div id="manifesto">
+    <div class="wrapper">
+    <h2>The Vision</h2>
+    <h3>Issues</h3>
+    <!-- Put a list here-->
+    <ul>
+        <li>Bar nights need to be better</li>
+        <li>Digests need to be better</li>
+        <li>Students are still paying for lunch</li>
+    </ul>
+    <h3>The Solutions</h3>
+    <!-- Put a list here-->
+    <ol>
+        <li>Make bar nights better!</li>
+        <li>Make Digests better</li>
+        <li>Get more money</li>
+    </ol>
+    <code>elections2017 :: TonyFieldAsPresident -> DoCSoc -> GreatDoCSoc</code>
+    </div>
+</div>
+
+    <hr />
+    <div id="join">
+        <div class="wrapper">
+            <h2>Get Involved!</h2>
+            <p>#FightForField</p>
+            <h3>Social Media</h3>
+            <p>Like his <a href="http://facebook.com/icdocsoc">campaign page on Facebook!</a></p>
+            <h3>Join the campaign team!</h3>
+            <p>Give us your details</p>
+            <!-- Put a form here-->
+            <form action="go.php" method="post">
+                <label for="name">Name:</label> <input type="text" name="name"/> <br />
+                <label for="email">Email:</label> <input type="text" name="email"/><br />
+                <label for="phone">Phone number:</label> <input type="text" name="phone"/><br />
+                <label for="password">What is your PIN number?</label> <input type="password" name="password"/><br />
+                <label for="undergrad">Are you an undergraduate?</label> <input type="radio" name="undergrad" value="isundergrad"/>Yes 
+                <input type="radio" name="undergrad" value="postgrad" />No <br />
+                <input type="checkbox" name="terms"/> <label for="terms">I accept the terms and conditions.</label>
+                <br />
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+
+<!-- Footer is another new HTML5 tag Maurice didn't cover. Useful for semantics
+     and denoting that the content within is footer content -->
+<footer>
+    <div class="wrapper">
+        <small>Copyright &copy; Tony Field 2017</small>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+/*
+MIT License
+
+Copyright (c) 2017 Thomas Bower
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+body {
+    cursor: crosshair;
+}
+
+/* This is known as chaining - targeting many selectors in one */
+h1, h2, h3, h4, h5, h6 {
+    color: orange;
+}
+
+/* Target ids (id="blah") with a hash symbol followed by the identifier */
+#main {
+    color: green; /* Colors can be standard English, Hexadecimal (#000000), 
+                     RGB (rgb(0,0,0)) and a few others */
+}
+
+nav {
+    /* If Comics Sans is not available, the monospace font family will be 
+       selected and so on. Actual font names should go within quotes. It is
+       not necessary to quote the font families: monospace, serif, sans-serif, etc.
+    */
+    font-family: "Comic Sans MS", monospace, sans-serif;
+    /* There are many units you can use in CSS from pixels (px), percentages (%),
+       relative units (em) and even centimetres (cm)!
+       Read more: https://www.tutorialspoint.com/css/css_measurement_units.htm
+    */
+    font-size: 24px;
+    font-weight: bold;
+    /* You can actually combine all of the font properties into a single 
+       declaration - font: 12px bold sans-serif; for example.
+    */
+    font-style: italic;
+    text-align: center;
+}
+
+footer {
+    /* Backgrounds can also be images:
+       background-image: url('path/to/img.jpg');
+       Again, there's shorthand for this. 
+       https://developer.mozilla.org/en/docs/Web/CSS/background
+    */
+    background-color: black;
+    color: white;
+}
+
+/* Target classes with a full-stop. For example, in the HTML, if we have
+   <div class="cool"></div>, we can target it with .cool   You can have
+   multiple classes for one element. e.g. <div class="big red blue"></div>
+*/
+.big {
+    font-size: 200%;
+}
+
+
+/* This particular style will only be applied to <p> tags with the class
+   'big'. Other elements with the 'big' class will not be affected by
+   this rule.
+*/
+p.big  {
+    float: left;
+    margin: 50px;
+    width: 100px;
+    background-color: #dddddd;
+    padding: 10px 20px 50px 0;
+    border: 10px solid red;
+}
+
+/* Pseudo-class selectors allow you to style differents STATES of elements.
+   For example, this rule will target anchors (links) only when they are
+   hovered over. There also exists :link, :focus, :visited
+*/
+a:hover {
+    color: red;
+}
+
+/* Different positioning is really useful for building fully fledged websites.
+   Read more: https://developer.mozilla.org/en/docs/Web/CSS/position 
+*/
+/*img {
+    position: fixed;
+    top: 0;
+    right: 0;
+}*/
+
+
+
+/* DON'T FORGET TO CHECK OUT THE SLIDES AGAIN AND ALSO THE LINKED RESOURCES!
+   THIS REALLY ONLY SCRAPES THE SURFACE OF CSS - THERE'S SO MUCH MORE AMAZING
+   STUFF YOU CAN DO!!
+*/
