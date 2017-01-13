@@ -21,10 +21,10 @@ Join the [Facebook group](https://www.facebook.com/groups/1770637513199253/) to 
 
 ## About
 The WebDev workshops are organised by [DoCSoc](http://docsoc.co.uk), Imperial's Computing Society.
+
 [w0p1watch]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=17d7f514-a716-441a-ac42-ce6bbd5bf7c7
 [w0p1source]: week0/part1-html
 [w0p1demo]: http://webdev.docsoc.co.uk/week0/part1-html/
-
 [w0p2watch]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=17d7f514-a716-441a-ac42-ce6bbd5bf7c7
 [w0p2source]: week0/part2-css
 [w0p2demo]: http://webdev.docsoc.co.uk/week0/part2-css/
