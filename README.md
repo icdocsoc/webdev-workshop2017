@@ -16,15 +16,15 @@ Join the [Facebook group](https://www.facebook.com/groups/1770637513199253/) to 
 
 ||||||
 |--------|------------|---------------------|-----------------------|-------------------|
-| Week 0, Part 1 | HTML | [Watch][w0p1watch] | Soon | Soon |
+| Week 0, Part 1 | HTML | [Watch][w0p1watch] | [Source][w0p1source] | [Demo][w0p1demo] |
 | Week 0, Part 2 | CSS | [Watch][w0p2watch] | [Source][w0p2source] | [Demo][w0p2demo] |
 
 ## About
 The WebDev workshops are organised by [DoCSoc](http://docsoc.co.uk), Imperial's Computing Society.
 
 [w0p1watch]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=17d7f514-a716-441a-ac42-ce6bbd5bf7c7
-[w0p1source]: week0/part1-html
-[w0p1demo]: http://webdev.docsoc.co.uk/week0/part1-html/
+[w0p1source]: https://github.com/icdocsoc/webdev-workshop2017/tree/master/week0/part0-html
+[w0p1demo]: http://webdev.docsoc.co.uk/week0/part0-html/
 [w0p2watch]: https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=17d7f514-a716-441a-ac42-ce6bbd5bf7c7
-[w0p2source]: week0/part2-css
+[w0p2source]: https://github.com/icdocsoc/webdev-workshop2017/tree/master/week0/part2-css
 [w0p2demo]: http://webdev.docsoc.co.uk/week0/part2-css/
