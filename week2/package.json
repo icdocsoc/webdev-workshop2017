@@ -1,0 +1,41 @@
+{
+  "name": "webdev2017",
+  "version": "0.0.1",
+  "description": "A simple chat webapp developed during webdev workshop 2017",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishrabhinav/webdev2017.git"
+  },
+  "keywords": [
+    "docsoc",
+    "webdev",
+    "webapp",
+    "node",
+    "npm",
+    "express",
+    "angular",
+    "mongodb",
+    "chat",
+    "socketio"
+  ],
+  "author": "DoCSoc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mishrabhinav/webdev2017/issues"
+  },
+  "homepage": "https://github.com/mishrabhinav/webdev2017#readme"
+}
