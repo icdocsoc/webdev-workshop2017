@@ -56,5 +56,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+// TODO: HTTP server
 
 module.exports = app;

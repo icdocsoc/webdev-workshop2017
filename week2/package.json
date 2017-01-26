@@ -4,6 +4,7 @@
   "description": "A simple chat webapp developed during webdev workshop 2017",
   "main": "app.js",
   "scripts": {
+    "_comment": "TODO: Use nodemon",
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
