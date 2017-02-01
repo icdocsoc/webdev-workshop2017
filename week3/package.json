@@ -1,0 +1,48 @@
+{
+  "name": "chatapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A chatapp developed to demonstrate webdev using NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icdocsoc/webdev-workshop2017.git"
+  },
+  "keywords": [
+    "webdev",
+    "docsoc",
+    "chatapp"
+  ],
+  "author": {
+    "name": "DoCSoc WebDev Workshop 2017",
+    "url": "https://www.facebook.com/groups/1770637513199253/"
+  },
+  "contributors": [
+    {
+      "name": "Abhinav Mishra",
+      "email": "abhinav.mishra15@imperial.ac.uk"
+    },
+    {
+      "name": "Szilveszter Szekely",
+      "email": "szilveszter.szekely15@imperial.ac.uk"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icdocsoc/webdev-workshop2017/issues"
+  },
+  "homepage": "https://github.com/icdocsoc/webdev-workshop2017#readme",
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  }
+}
