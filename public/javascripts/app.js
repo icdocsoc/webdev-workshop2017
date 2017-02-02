@@ -13,6 +13,18 @@ app.value('User', {
 app.service('MessageService', function (User, Message) {
   var messages = Message.query()
 
+  var listeners = []
+
+  var notifyNewMessage = function () {
+    for (var listener of listeners) {
+      listener()
+    }
+  }
+
+  this.onNewMessage = function (fn) {
+    listeners.push(fn)
+  }
+
   this.get = function () {
     return messages
   }
@@ -23,13 +35,22 @@ app.service('MessageService', function (User, Message) {
       text: text,
       date: new Date()
     })
-    msg.$save()
+    msg.$save(function () {
+      Message.query(function (newMessages) {
+        messages = newMessages
+        notifyNewMessage()
+      })
+    })
   }
 })
 
 app.controller('ChatController', function ($scope, User, MessageService) {
   $scope.user = User
   $scope.messages = MessageService.get()
+
+  MessageService.onNewMessage(function () {
+    $scope.messages = MessageService.get()
+  })
 
   $scope.setNick = function () {
     User.nickname = $scope.nickname
