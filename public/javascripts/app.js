@@ -21,6 +21,13 @@ app.service('MessageService', function (User, Message) {
     }
   }
 
+  var refresh = function () {
+    Message.query(function (newMessages) {
+      messages = newMessages
+      notifyNewMessage()
+    })
+  }
+
   this.onNewMessage = function (fn) {
     listeners.push(fn)
   }
@@ -36,10 +43,7 @@ app.service('MessageService', function (User, Message) {
       date: new Date()
     })
     msg.$save(function () {
-      Message.query(function (newMessages) {
-        messages = newMessages
-        notifyNewMessage()
-      })
+      refresh()
     })
   }
 })
