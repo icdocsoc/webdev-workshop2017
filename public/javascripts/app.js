@@ -1,26 +1,29 @@
 var angular = window.angular
 
-var app = angular.module('chatapp', [])
+var app = angular.module('chatapp', ['ngResource'])
+
+app.factory('Message', function ($resource) {
+  return $resource('/api/messages')
+})
 
 app.value('User', {
   nickname: 'Anonymous'
 })
 
-app.service('MessageService', function (User) {
-  var messages = []
+app.service('MessageService', function (User, Message) {
+  var messages = Message.query()
 
   this.get = function () {
     return messages
   }
 
   this.send = function (text) {
-    var msg = {
+    var msg = new Message({
       sender: User.nickname,
       text: text,
       date: new Date()
-    }
-
-    messages.unshift(msg)
+    })
+    msg.$save()
   }
 })
 
