@@ -10,7 +10,7 @@ app.value('User', {
   nickname: 'Anonymous'
 })
 
-app.service('MessageService', function (User, Message) {
+app.service('MessageService', function ($interval, User, Message) {
   var messages = Message.query()
 
   var listeners = []
@@ -31,6 +31,8 @@ app.service('MessageService', function (User, Message) {
   this.onNewMessage = function (fn) {
     listeners.push(fn)
   }
+
+  $interval(refresh, 1000)
 
   this.get = function () {
     return messages
