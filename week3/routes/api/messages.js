@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
 })
 
 router.post('/', function (req, res) {
-  messages.push(req.body)
+  messages.unshift(req.body)
   res.status(200).end()
 })
 
