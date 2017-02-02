@@ -4,7 +4,7 @@ var router = express.Router()
 var Message = require('../../models/message')
 
 router.get('/', function (req, res, next) {
-  Message.find({}).exec(function (err, messages) {
+  Message.find({}).sort({date: 'desc'}).exec(function (err, messages) {
     if (err) {
       return next(err)
     }
