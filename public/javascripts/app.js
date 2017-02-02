@@ -2,8 +2,8 @@ var angular = window.angular
 
 var app = angular.module('chatapp', [])
 
-app.controller('ChatController', function ($scope) {
-  $scope.messages = [
+app.service('MessageService', function () {
+  var messages = [
     {
       sender: 'Szilveszter',
       text: 'Cras justo odio',
@@ -30,4 +30,12 @@ app.controller('ChatController', function ($scope) {
       date: '2017-02-02 18:05'
     }
   ]
+
+  this.get = function () {
+    return messages
+  }
+})
+
+app.controller('ChatController', function ($scope, MessageService) {
+  $scope.messages = MessageService.get()
 })
