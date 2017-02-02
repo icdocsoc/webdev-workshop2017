@@ -4,6 +4,9 @@ var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 
+var mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/chatapp')
+
 var routes = require('./routes')
 
 var app = express()
