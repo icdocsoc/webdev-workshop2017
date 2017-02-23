@@ -83,4 +83,16 @@ app.controller('UserController', function ($scope, $http, User) {
       $scope.regStatus = 'danger'
     })
   }
+
+  $scope.login = function () {
+    $http.post('/api/user/login', {
+      username: $scope.user.username,
+      password: $scope.user.password
+    }).then(function (res) {
+      $scope.user.token = res.data.token
+    }).catch(function (res) {
+      $scope.regMessage = res.data.message || 'Login failed'
+      $scope.regStatus = 'danger'
+    })
+  }
 })
