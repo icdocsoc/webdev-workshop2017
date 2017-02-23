@@ -6,9 +6,7 @@ app.factory('Message', function ($resource) {
   return $resource('/api/message')
 })
 
-app.value('User', {
-  nickname: 'Anonymous'
-})
+app.value('User', {})
 
 app.factory('jwtAuth', function (User) {
   return {
@@ -57,7 +55,6 @@ app.service('MessageService', function ($interval, User, Message) {
 
   this.send = function (text) {
     var msg = new Message({
-      sender: User.nickname,
       text: text,
       date: new Date()
     })
@@ -74,10 +71,6 @@ app.controller('ChatController', function ($scope, User, MessageService) {
   MessageService.onNewMessage(function () {
     $scope.messages = MessageService.get()
   })
-
-  $scope.setNick = function () {
-    User.nickname = $scope.nickname
-  }
 
   $scope.send = function () {
     MessageService.send($scope.text)

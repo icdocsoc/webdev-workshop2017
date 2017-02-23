@@ -16,6 +16,7 @@ router.get('/', authenticate, function (req, res, next) {
 
 router.post('/', authenticate, function (req, res, next) {
   var msg = new Message(req.body)
+  msg.sender = req.user.username
   msg.save(function (err) {
     if (err) {
       next(err)
