@@ -67,3 +67,14 @@ app.controller('ChatController', function ($scope, User, MessageService) {
     $scope.text = ''
   }
 })
+
+app.controller('UserController', function ($scope, $http, User) {
+  $scope.user = User
+
+  $scope.register = function () {
+    $http.post('/api/user/register', {
+      username: $scope.user.username,
+      password: $scope.user.password
+    })
+  }
+})

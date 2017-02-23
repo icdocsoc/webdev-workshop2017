@@ -37,8 +37,27 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container">
-      <div ng-controller="ChatController" class="panel panel-default">
+    <div ng-controller="UserController" class="container">
+      <div ng-show="!user.token" class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Register</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="user.username" placeholder="Set your username...">
+            </div><!-- /input-group -->
+            <div class="form-group">
+              <input type="password" class="form-control" ng-model="user.password" placeholder="Set your password...">
+            </div><!-- /input-group -->
+            <button class="btn btn-default" type="submit" name="login" ng-click="login()">Login</button>
+            <button class="btn btn-primary" type="submit" name="login" ng-click="register()">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div ng-controller="ChatController" class="container">
+      <div ng-show="user.token" class="panel panel-default">
         <div class="panel-heading">
           <h3>Chat Window for {{user.nickname}}</h3>
         </div>
