@@ -3,7 +3,7 @@ var angular = window.angular
 var app = angular.module('chatapp', ['ngResource'])
 
 app.factory('Message', function ($resource) {
-  return $resource('/api/messages')
+  return $resource('/api/message')
 })
 
 app.value('User', {

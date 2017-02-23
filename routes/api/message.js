@@ -17,6 +17,7 @@ router.post('/', function (req, res, next) {
   msg.save(function (err) {
     if (err) {
       next(err)
+      return
     }
     res.status(200).end()
   })
