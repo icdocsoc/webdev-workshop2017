@@ -75,6 +75,12 @@ app.controller('UserController', function ($scope, $http, User) {
     $http.post('/api/user/register', {
       username: $scope.user.username,
       password: $scope.user.password
+    }).then(function (res) {
+      $scope.regMessage = 'Registration successful! You can log in now.'
+      $scope.regStatus = 'success'
+    }).catch(function (res) {
+      $scope.regMessage = 'Registration failed! Someone is already using that name.'
+      $scope.regStatus = 'danger'
     })
   }
 })
