@@ -1,9 +1,11 @@
 var express = require('express')
 var router = express.Router()
 
+var authenticate = require('./authenticate')
+
 var Message = require('../../models/message')
 
-router.get('/', function (req, res, next) {
+router.get('/', authenticate, function (req, res, next) {
   Message.find({}).sort({date: 'desc'}).exec(function (err, messages) {
     if (err) {
       return next(err)
@@ -12,7 +14,7 @@ router.get('/', function (req, res, next) {
   })
 })
 
-router.post('/', function (req, res, next) {
+router.post('/', authenticate, function (req, res, next) {
   var msg = new Message(req.body)
   msg.save(function (err) {
     if (err) {
