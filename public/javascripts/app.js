@@ -10,8 +10,21 @@ app.value('User', {
   nickname: 'Anonymous'
 })
 
+app.factory('jwtAuth', function (User) {
+  return {
+    request: function (config) {
+      config.headers.Authorization = 'JWT ' + User.token
+      return config
+    }
+  }
+})
+
+app.config(function ($httpProvider) {
+  $httpProvider.interceptors.push('jwtAuth')
+})
+
 app.service('MessageService', function ($interval, User, Message) {
-  var messages = Message.query()
+  var messages = []
 
   var listeners = []
 
@@ -22,6 +35,10 @@ app.service('MessageService', function ($interval, User, Message) {
   }
 
   var refresh = function () {
+    if (!User.token) {
+      return
+    }
+
     Message.query(function (newMessages) {
       messages = newMessages
       notifyNewMessage()
